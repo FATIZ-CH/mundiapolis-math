@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-import numpy
+
+
 def cat_arrays(arr1, arr2):
-    return numpy.concatenate((arr1, arr2), axis=None)
+    arr3 = []
+    arr3 = arr1 + arr2
+    return arr3
+
 cat_arrays = __import__('6-howdy_partner').cat_arrays
 
 arr1 = [1, 2, 3, 4, 5]
