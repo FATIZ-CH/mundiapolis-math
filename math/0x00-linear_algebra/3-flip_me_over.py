@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
-import numpy
-def matrix_transpose(matrix):
-    return numpy.transpose(matrix)
 
+def matrix_transpose(matrix):
+    new_matrix = []
+    
+    for i in range(len(matrix[0])):
+        N_row = []
+        for j in range(len(matrix)):
+            N_row.append(matrix[j][i])
+        new_matrix.append(N_row)
+
+    return new_matrix
+  
 matrix_transpose = __import__('3-flip_me_over').matrix_transpose
 
 mat1 = [[1, 2], [3, 4]]
