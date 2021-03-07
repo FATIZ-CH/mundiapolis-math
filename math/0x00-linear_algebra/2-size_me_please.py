@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-import numpy as np
+
 def matrix_shape(matrix):
-   return np.shape(matrix)
+    if type(matrix[0]) != list:
+        return [len(matrix)]
+    else:
+        return [len(matrix)] + matrix_shape(matrix[0])
+      
 
 matrix_shape = __import__('2-size_me_please').matrix_shape
 
