@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-import numpy
 def add_arrays(arr1, arr2):
-    return numpy.add(arr1,arr2)
-
+    if len(arr1) == len(arr2):
+        result = []
+        for i in range(len(arr1)):
+            result.append(arr1[i] + arr2[i])
+        return result
+    return None
 add_arrays = __import__('4-line_up').add_arrays
 
 arr1 = [1, 2, 3, 4]
